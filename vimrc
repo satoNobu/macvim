@@ -47,7 +47,7 @@ endif
 " ユーザ優先設定($HOME/.vimrc_first.vim)があれば読み込む。読み込んだ後に変数
 " g:vimrc_first_finishに非0な値が設定されていた場合には、それ以上の設定ファ
 " イルの読込を中止する。
-if 1 && exists('$HOME') && filereadable($HOME . '/.vimrc_first.vim')
+If 1 && exists('$HOME') && filereadable($HOME . '/.vimrc_first.vim')
   unlet! g:vimrc_first_finish
   source $HOME/.vimrc_first.vim
   if exists('g:vimrc_first_finish') && g:vimrc_first_finish != 0
@@ -306,3 +306,5 @@ let NERDTreeShowHidden = 1
  
 " デフォルトでツリーを表示させる
 autocmd VimEnter * execute 'NERDTree'
+"undoファイル無効化"
+:set noundofile
