@@ -308,3 +308,5 @@ let NERDTreeShowHidden = 1
 autocmd VimEnter * execute 'NERDTree'
 "undoファイル無効化"
 :set noundofile
+"swapファイルを作成しない"
+:set noswapfile
